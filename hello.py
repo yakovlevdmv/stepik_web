@@ -10,4 +10,4 @@ def app(environ, start_response):
     #query = query.split('&')
     #return iter([''.join(["{}\n".format(hlib) for hlib in query])]) #iter([data])
     print(query.replace('&', '\n'))
-    return [bytes(query.replace('&','\n'), 'utf-8')]
+    return [query.replace('&','\n')]
